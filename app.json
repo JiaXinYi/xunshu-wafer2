@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/map/map",
-    "pages/clock/clock"
+    "pages/clock/clock",
+    "pages/booklists/booklists",
+    "pages/account/account"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -12,22 +14,28 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "color": "black",
-    "selectedColor": "blue",
-    "borderStyle": "black",
+    "color": "#bfbfbf",
+    "selectedColor": "#1296db",
+    "borderStyle": "#bfbfbf",
     "backgroundColor": "#fff",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "imgs/clock-2.png",
-        "selectedIconPath": "imgs/clock.png"
+        "iconPath": "imgs/index-1.png",
+        "selectedIconPath": "imgs/index.png"
       },
       {
         "pagePath": "pages/map/map",
         "text": "地图",
-        "iconPath": "imgs/clock-2.png",
-        "selectedIconPath": "imgs/clock.png"
+        "iconPath": "imgs/earth-1.png",
+        "selectedIconPath": "imgs/earth.png"
+      },
+      {
+        "pagePath": "pages/account/account",
+        "text": "我的",
+        "iconPath": "imgs/account-1.png",
+        "selectedIconPath": "imgs/account.png"
       }
     ]
   }

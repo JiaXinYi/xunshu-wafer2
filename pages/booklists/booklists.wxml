@@ -1,0 +1,25 @@
+<!--pages/booklists/booklists.wxml-->
+
+
+<view wx:for="{{booklists}}" wx:key="group" >
+  <view class="group-title">{{title[index]}}</view>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper-box">
+    <block wx:for="{{item}}" wx:for-item="book">
+      <swiper-item class="slide-item">
+        <image src="{{book.cover}}" class="slide-image" />
+        <view>书名：{{book.title}}</view>
+        <view>豆瓣评分：{{book.rating}}</view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+
+<!-- <view wx:for="{{booklists}}" wx:key="item">
+  <image class="book-cover" src="{{item.cover}}"></image>
+  <view>书名：{{item.title}}</view>
+  <view>豆瓣评分：{{item.rating}}</view>
+   <a url="../../{{item.url}}" >详情</a> 
+</view> -->
+
+<!-- <button bindtap='getBooklists'>点击查看数据</button> -->

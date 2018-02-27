@@ -1,0 +1,180 @@
+{
+  "r": 0,
+  "res": {
+    "TYPE": "ActivityPageWidget",
+    "comment_count": 7,
+    "id": 588,
+    "kind": 1,
+    "kind_cn": "Top 10",
+    "kind_str": "top10",
+    "page_id": 12,
+    "payload": {
+      "background_color": "rgba(22, 34, 29, 0.8)",
+      "background_img": "https://img1.doubanio.com/view/activity_page/raw/public/p2087.jpg",
+      "description": "\u5bf9\u5927\u536b\u6797\u5947\u548c\u9a6c\u514b\u5f17\u7f57\u65af\u7279\u7684\u5d07\u62dc\u5df2\u7ecf\u65e0\u6cd5\u7528\u6ed4\u6ed4\u6c5f\u6c34\u6765\u5f62\u5bb9\uff0c\u8fd9\u672c\u4e66\u4e0d\u4ec5\u89e3\u8c1c\uff0c\u66f4\u8ba9\u53cc\u5cf0\u7684\u4e16\u754c\u89c2\u66f4\u52a0\u5b8c\u6574\u800c\u5e9e\u5927\u3002\u4e00\u672cFBI\u6863\u6848\uff0c\u4e00\u90e8\u63a8\u7406\u5c0f\u8bf4\uff0c\u4e5f\u662f\u4e00\u628a\u901a\u5411\u795e\u79d8\u7684\u94a5\u5319\u3002\u53f2\u4e0a\u6700\u4f1f\u5927\u5267\u96c6\u7684\u7ec4\u6210\u90e8\u5206\uff0c\u503c\u5f97\u8dea\u7740\u770b\u5b8c\u3002",
+      "has_barrage": "on",
+      "mobile_background_img": "https://img3.doubanio.com/view/activity_page/raw/public/p2094.jpg",
+      "subject_ids": "26981446,27035185,26989242,27041533,26836970,27036319,27077140,26963322,27180217,27017782",
+      "title": "2017\u5e74\u5ea6|\u79d1\u5e7b\u00b7\u5947\u5e7b",
+      "user_id": "1738012"
+    },
+    "status": 0,
+    "subject": {
+      "cover": "https://img1.doubanio.com/lpic/s29497457.jpg",
+      "id": "26981446",
+      "interest_status": null,
+      "is_released": true,
+      "m_url": "https://m.douban.com/book/subject/26981446/",
+      "orig_title": "",
+      "rating": 8.5,
+      "rating_count": 574,
+      "title": "\u53cc\u5cf0: \u795e\u79d8\u53f2",
+      "type": "book",
+      "url": "https://book.douban.com/subject/26981446/",
+      "writers": [
+        "[\u7f8e] \u9a6c\u514b\u00b7\u5f17\u7f57\u65af\u7279"
+      ]
+    },
+    "subjects": [
+      {
+        "cover": "https://img1.doubanio.com/lpic/s29497457.jpg",
+        "id": "26981446",
+        "interest_status": null,
+        "is_released": true,
+        "m_url": "https://m.douban.com/book/subject/26981446/",
+        "orig_title": "",
+        "rating": 8.5,
+        "rating_count": 574,
+        "title": "\u53cc\u5cf0: \u795e\u79d8\u53f2",
+        "type": "book",
+        "url": "https://book.douban.com/subject/26981446/"
+      },
+      {
+        "cover": "https://img3.doubanio.com/lpic/s29452375.jpg",
+        "id": "27035185",
+        "interest_status": null,
+        "is_released": true,
+        "m_url": "https://m.douban.com/book/subject/27035185/",
+        "orig_title": "",
+        "rating": 9.3,
+        "rating_count": 211,
+        "title": "\u8d1d\u4f26\u4e0e\u9732\u897f\u6069",
+        "type": "book",
+        "url": "https://book.douban.com/subject/27035185/"
+      },
+      {
+        "cover": "https://img3.doubanio.com/lpic/s29381992.jpg",
+        "id": "26989242",
+        "interest_status": null,
+        "is_released": true,
+        "m_url": "https://m.douban.com/book/subject/26989242/",
+        "orig_title": "",
+        "rating": 9.2,
+        "rating_count": 1721,
+        "title": "\u6709\u532a2",
+        "type": "book",
+        "url": "https://book.douban.com/subject/26989242/"
+      },
+      {
+        "cover": "https://img3.doubanio.com/lpic/s29578434.jpg",
+        "id": "27041533",
+        "interest_status": null,
+        "is_released": true,
+        "m_url": "https://m.douban.com/book/subject/27041533/",
+        "orig_title": "",
+        "rating": 8.7,
+        "rating_count": 1317,
+        "title": "\u4eff\u751f\u4eba\u4f1a\u68a6\u89c1\u7535\u5b50\u7f8a\u5417\uff1f",
+        "type": "book",
+        "url": "https://book.douban.com/subject/27041533/"
+      },
+      {
+        "cover": "https://img3.doubanio.com/lpic/s29245314.jpg",
+        "id": "26836970",
+        "interest_status": null,
+        "is_released": true,
+        "m_url": "https://m.douban.com/book/subject/26836970/",
+        "orig_title": "",
+        "rating": 8.0,
+        "rating_count": 3276,
+        "title": "\u6c99\u4e18",
+        "type": "book",
+        "url": "https://book.douban.com/subject/26836970/"
+      },
+      {
+        "cover": "https://img1.doubanio.com/lpic/s29645808.jpg",
+        "id": "27036319",
+        "interest_status": null,
+        "is_released": true,
+        "m_url": "https://m.douban.com/book/subject/27036319/",
+        "orig_title": "",
+        "rating": 8.6,
+        "rating_count": 1418,
+        "title": "\u767e\u5e74\u6cd5",
+        "type": "book",
+        "url": "https://book.douban.com/subject/27036319/"
+      },
+      {
+        "cover": "https://img3.doubanio.com/lpic/s29535114.jpg",
+        "id": "27077140",
+        "interest_status": null,
+        "is_released": true,
+        "m_url": "https://m.douban.com/book/subject/27077140/",
+        "orig_title": "",
+        "rating": 8.7,
+        "rating_count": 242,
+        "title": "\u5947\u70b9\u9057\u6c11",
+        "type": "book",
+        "url": "https://book.douban.com/subject/27077140/"
+      },
+      {
+        "cover": "https://img3.doubanio.com/lpic/s29435410.jpg",
+        "id": "26963322",
+        "interest_status": null,
+        "is_released": true,
+        "m_url": "https://m.douban.com/book/subject/26963322/",
+        "orig_title": "",
+        "rating": 8.4,
+        "rating_count": 322,
+        "title": "\u5c01\u95ed\u5f0f\u8f66\u5e93",
+        "type": "book",
+        "url": "https://book.douban.com/subject/26963322/"
+      },
+      {
+        "cover": "https://img1.doubanio.com/lpic/s29588977.jpg",
+        "id": "27180217",
+        "interest_status": null,
+        "is_released": true,
+        "m_url": "https://m.douban.com/book/subject/27180217/",
+        "orig_title": "",
+        "rating": 7.8,
+        "rating_count": 529,
+        "title": "\u4eba\u4e4b\u5f7c\u5cb8",
+        "type": "book",
+        "url": "https://book.douban.com/subject/27180217/"
+      },
+      {
+        "cover": "https://img3.doubanio.com/lpic/s29640470.jpg",
+        "id": "27017782",
+        "interest_status": null,
+        "is_released": true,
+        "m_url": "https://m.douban.com/book/subject/27017782/",
+        "orig_title": "",
+        "rating": 8.3,
+        "rating_count": 428,
+        "title": "\u4e8c\u4ee3\u76ee\u5f52\u6765",
+        "type": "book",
+        "url": "https://book.douban.com/subject/27017782/"
+      }
+    ],
+    "user": {
+      "avatar": "https://img3.doubanio.com/icon/u1738012-1.jpg",
+      "id": "1738012",
+      "name": "leafalone",
+      "url": "https://www.douban.com/people/leafalone/"
+    }
+  },
+  "status": {
+    "code": 200
+  }
+}
