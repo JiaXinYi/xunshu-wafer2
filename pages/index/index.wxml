@@ -9,7 +9,7 @@
   </view>
   <view class="btn-group">
     <button class="btn-go" bindtap='goBooklistPage'>点击寻书</button>
-    <button class="btn-go" bindtap='goBooklistPage'>点击寻书店</button>
+    <button class="btn-go" bindtap='goBookstoresPage'>点击寻书店</button>
   </view>
 </view>
 <!-- <view class="container">

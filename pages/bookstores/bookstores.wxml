@@ -1,0 +1,10 @@
+<!--pages/bookstores/bookstores.wxml-->
+<view wx:for="{{bookstoreList}}">
+  <view class="group-title">{{item.title}}</view>
+
+  <view class="bs-detail">
+    <image src="http:{{item.url}}" class="bs-img" >
+    </image>
+    <view class="bs-desp">{{item.description}}</view>
+  </view>
+</view>

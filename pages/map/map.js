@@ -1,39 +1,39 @@
-var app = getApp()
+var app = getApp();
+var bmap = require('../../libs/bmap-wx/bmap-wx.min.js');
+var wxMarkerData = [];  //定位成功回调对象  
 Page({
   data: {
-    markers: [{
-      latitude: 23.099994,
-      longitude: 113.324520,
-      name: 'T.I.T 创意园',
-      desc: '我现在的位置'
-    }],
-    covers: [{
-      latitude: 23.099794,
-      longitude: 113.324520,
-      iconPath: 'imgs/clock.png',
-      rotate: 10
-    }, {
-      latitude: 23.099298,
-      longitude: 113.324129,
-      iconPath: 'imgs/clock.png',
-      rotate: 90
-    }]
+    ak: "6eQIBOGeEr90jvkCgeAl14VZTW9WU2Kf",
+    markers: [],
+    longitude: '',
+    latitude: '',
+    address: '',
+    cityInfo: {}
   },
-  onLoad: function () {
-    console.log('地图定位！')
-    var that = this
-    wx.getLocation({
-      type: 'gcj02', //返回可以用于wx.openLocation的经纬度
-      success: function (res) {
-        console.log(res)
-        var latitude = res.latitude;
-        var longitude = res.longitude;
-        wx.openLocation({
-          latitude: latitude,
-          longitude: longitude,
-          scale: 1
-        })
-      }
+  onLoad: function (options) {
+    var that = this;
+    var BMap = new bmap.BMapWX({
+      ak: that.data.ak
+    });
+    var fail = function (data) {
+      console.log(data);
+    };
+    var success = function (data) {
+      console.log(data);
+      wxMarkerData = data.wxMarkerData;
+      console.log(wxMarkerData);
+      that.setData({
+        markers: wxMarkerData,
+        latitude: wxMarkerData[0].latitude,
+        longitude: wxMarkerData[0].longitude,
+        address: wxMarkerData[0].address,
+        cityInfo: data.originalData.result.addressComponent
+      });
+    }
+    // 发起regeocoding检索请求   
+    BMap.regeocoding({
+      fail: fail,
+      success: success
     });
   },
 })

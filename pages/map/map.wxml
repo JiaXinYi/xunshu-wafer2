@@ -1,3 +1,13 @@
 <!--pages/map.wxml-->
-<map longitude="23.099994" latitude="113.324520" markers="{{markers}}" covers="{{covers}}" scale="16" style="width: 375px; height: 200px;">
-</map>
+
+<view class="map_container">
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map>
+</view>
+
+<view>  
+    <viwe>经度：{{longitude}}</viwe>  
+    <view>纬度：{{latitude}}</view>  
+    <view>地址：{{address}}</view>  
+    <view>城市：{{cityInfo.city}}</view>  
+    <image></image>
+</view>  

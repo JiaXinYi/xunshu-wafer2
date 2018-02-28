@@ -55,5 +55,10 @@ Page({
     wx.navigateTo({
       url: '../booklists/booklists',
     })
+  },
+  goBookstoresPage:function(){
+    wx.navigateTo({
+      url: '../bookstores/bookstores',
+    })
   }
 })
