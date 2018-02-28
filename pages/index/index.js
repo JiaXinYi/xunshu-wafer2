@@ -60,5 +60,10 @@ Page({
     wx.navigateTo({
       url: '../bookstores/bookstores',
     })
+  },
+  goSearchPage:function(){
+    wx.navigateTo({
+      url: '../search/search',
+    })
   }
 })

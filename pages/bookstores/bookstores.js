@@ -1,5 +1,8 @@
 // pages/bookstores/bookstores.js
+//获取应用实例
+const app = getApp()
 var bookstoreData = require('../../json/bookstoreList.js')
+
 Page({
 
   /**
@@ -28,9 +31,10 @@ Page({
       Addresses.push(bookaddress);
       Lists.push(bookstore);
     }
-    console.log(Lists);
+    // console.log(Lists);
     this.setData({
-      bookstoreList: Lists
+      bookstoreList: Lists,
+      bookstoreAddress: Addresses
     })
   },
 

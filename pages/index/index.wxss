@@ -17,7 +17,7 @@
 }
 
 .btn-group {
-  margin-top: 200px;
+  margin-top: 120px;
 }
 .btn-go{
   margin-top: 10px;

@@ -1,10 +1,17 @@
 /* pages/map.wxss */
-.map_container{ 
-    height: 300px; 
-    width: 100%; 
-} 
+page{
+  height: 100%;
+}
+.map_container {
+  height: 100%;
+  width: 100%;
+}
 
-.map { 
-    height: 100%; 
-    width: 100%; 
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+.pos-info {
+  text-align: center;
 }

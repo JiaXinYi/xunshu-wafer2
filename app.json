@@ -5,7 +5,9 @@
     "pages/map/map",
     "pages/clock/clock",
     "pages/booklists/booklists",
-    "pages/account/account"
+    "pages/account/account",
+    "pages/bookstores/bookstores",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",

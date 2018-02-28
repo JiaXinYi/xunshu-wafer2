@@ -363,5 +363,5 @@ var listData2 = {
 };
 
 module.exports = {
-  listdata: [listData1,listData2]
+  listdata: [listData1, listData2]
 }

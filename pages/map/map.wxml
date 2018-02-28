@@ -1,13 +1,14 @@
 <!--pages/map.wxml-->
 
 <view class="map_container">
-  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map>
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" show-location="true" markers="{{markers}}" bindmarkertap="markertap"></map>
 </view>
 
-<view>  
+
+<!-- <view class="pos-info">  
     <viwe>经度：{{longitude}}</viwe>  
     <view>纬度：{{latitude}}</view>  
     <view>地址：{{address}}</view>  
     <view>城市：{{cityInfo.city}}</view>  
     <image></image>
-</view>  
+</view>   -->
