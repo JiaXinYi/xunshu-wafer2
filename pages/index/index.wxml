@@ -1,8 +1,8 @@
 <!-- index.wxml-->
 <view class="container">
   <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
+    <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button> -->
+    <block>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="../../imgs/logo.png" background-size="cover"></image>
       <text class="userinfo-nickname">Design by JiaXin</text>
     </block>
@@ -11,7 +11,7 @@
     <button class="btn-go" bindtap='goBooklistPage'>豆瓣书籍</button>
     <button class="btn-go" bindtap='goBookstoresPage'>独立书店</button>
     <button class="btn-go" bindtap='goSearchPage'>寻书</button>
-    
+
 
   </view>
 </view>
