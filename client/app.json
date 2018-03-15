@@ -1,13 +1,15 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/addCgi/addCgi",
     "pages/logs/logs",
     "pages/map/map",
     "pages/clock/clock",
     "pages/booklists/booklists",
     "pages/account/account",
     "pages/bookstores/bookstores",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/home/home"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -23,6 +25,12 @@
     "list": [
       {
         "pagePath": "pages/index/index",
+        "text": "登录",
+        "iconPath": "imgs/index-1.png",
+        "selectedIconPath": "imgs/index.png"
+      },
+      {
+        "pagePath": "pages/home/home",
         "text": "首页",
         "iconPath": "imgs/index-1.png",
         "selectedIconPath": "imgs/index.png"

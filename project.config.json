@@ -1,33 +1,12 @@
 {
-	"description": "项目配置文件。",
+	"client": "./client",
+	"svr": "./server",
+	"miniprogramRoot": "./client",
+	"qcloudRoot": "./server",
 	"setting": {
-		"urlCheck": true,
-		"es6": true,
-		"postcss": true,
-		"minified": true,
 		"newFeature": true
 	},
-	"compileType": "miniprogram",
-	"libVersion": "1.9.91",
 	"appid": "wxafc1aaa4cc118bc6",
-	"projectname": "xunshu",
-	"isGameTourist": false,
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": -1,
-			"list": []
-		}
-	}
+	"projectname": "nodejs-demo",
+	"condition": {}
 }

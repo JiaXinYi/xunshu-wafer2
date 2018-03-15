@@ -1,4 +1,4 @@
-//index.js
+// pages/home/home.js
 //获取应用实例
 const app = getApp()
 
@@ -10,7 +10,7 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
-  bindViewTap: function() {
+  bindViewTap: function () {
     wx.navigateTo({
       url: '../logs/logs'
     })
@@ -43,7 +43,7 @@ Page({
     //   })
     // }
   },
-  getUserInfo: function(e) {
+  getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
@@ -51,17 +51,17 @@ Page({
       hasUserInfo: true
     })
   },
-  goBooklistPage:function(){
+  goBooklistPage: function () {
     wx.navigateTo({
       url: '../booklists/booklists',
     })
   },
-  goBookstoresPage:function(){
+  goBookstoresPage: function () {
     wx.navigateTo({
       url: '../bookstores/bookstores',
     })
   },
-  goSearchPage:function(){
+  goSearchPage: function () {
     wx.navigateTo({
       url: '../search/search',
     })
