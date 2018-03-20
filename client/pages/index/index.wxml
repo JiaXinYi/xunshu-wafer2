@@ -8,7 +8,7 @@
             background-size="cover"
         ></image>
         <view>
-            <text class="userinfo-nickname">{{logged ? userInfo.nickName : '点击测试登录接口'}}</text>
+            <text class="userinfo-nickname">{{logged ? userInfo.nickName : '使用微信账号登录'}}</text>
             <text class="userinfo-nickname" wx:if="{{logged}}">{{userInfo.lastLoginTime}}</text>
         </view>
     </view>
@@ -50,7 +50,7 @@
         </view>
     </view>
 
-    <!-- 上传图片测试 -->
+    <!-- 快速增加 CGI测试 -->
     <view class="uploader">
         <navigator url="../addCgi/addCgi" open-type="navigate" class="uploader-text">
             <text>快速增加 CGI</text>

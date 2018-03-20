@@ -71,6 +71,7 @@ var defaultOptions = {
  */
 var login = function login(options) {
     options = utils.extend({}, defaultOptions, options);
+    console.log(defaultOptions.loginUrl);
 
     if (!defaultOptions.loginUrl) {
         options.fail(new LoginError(constants.ERR_INVALID_PARAMS, '登录错误：缺少登录地址，请通过 setLoginUrl() 方法设置登录地址'));
