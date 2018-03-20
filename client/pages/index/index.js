@@ -1,4 +1,5 @@
-//index.js
+//index.js 
+// wafer2-client-sdk用法：https://cloud.tencent.com/document/product/619/11449
 var qcloud = require('../../vendor/wafer2-client-sdk/index')
 var config = require('../../config')
 var util = require('../../utils/util.js')

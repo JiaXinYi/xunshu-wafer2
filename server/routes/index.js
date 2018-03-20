@@ -8,6 +8,7 @@ const controllers = require('../controllers')
 
 // 从 sdk 中取出中间件
 // 这里展示如何使用 Koa 中间件完成登录态的颁发与验证
+// 用法说明看这里： https://cloud.tencent.com/document/product/619/11448
 const { auth: { authorizationMiddleware, validationMiddleware } } = require('../qcloud')
 
 // --- 登录与授权 Demo --- //
