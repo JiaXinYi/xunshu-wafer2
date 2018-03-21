@@ -96,6 +96,7 @@ var login = function login(options) {
         header[constants.WX_HEADER_ENCRYPTED_DATA] = encryptedData;
         header[constants.WX_HEADER_IV] = iv;
 
+        console.log(options.loginUrl);
         // 请求服务器登录地址，获得会话信息
         wx.request({
             url: options.loginUrl,
