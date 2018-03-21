@@ -28,22 +28,22 @@ Page({
         })
     },
 
-    copyCode: function (e) {
-        var codeId = e.target.dataset.codeId
-        wx.setClipboardData({
-            data: code[codeId - 1],
-            success: function () {
-                util.showSuccess('复制成功')
-            }
-        })
-    }
+    // copyCode: function (e) {
+    //     var codeId = e.target.dataset.codeId
+    //     wx.setClipboardData({
+    //         data: code[codeId - 1],
+    //         success: function () {
+    //             util.showSuccess('复制成功')
+    //         }
+    //     })
+    // }
 })
 
-var code = [
-`router.get('/demo', controllers.demo)`,
-`module.exports = ctx => {
-    ctx.state.data = {
-        msg: 'Hello World'
-    }
-}`
-]
+// var code = [
+// `router.get('/demo', controllers.demo)`,
+// `module.exports = ctx => {
+//     ctx.state.data = {
+//         msg: 'Hello World'
+//     }
+// }`
+// ]

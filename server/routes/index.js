@@ -37,4 +37,6 @@ router.post('/message', controllers.message.post)
 // 测试新增CGI
 router.get('/demo',controllers.demo)
 
+// 数据库相关操作
+router.get('/select', controllers.select)
 module.exports = router

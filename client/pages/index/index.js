@@ -227,13 +227,15 @@ Page({
       login: true,
       success(result) {
         util.showSuccess('请求成功完成')
-        console.log(JSON.stringify(result.data));
+        that.setData({
+          requestResult: JSON.stringify(result.data)
+        })
       },
       fail(error) {
         util.showModel('请求失败', error);
         console.log('request fail', error);
       }
     })
-    console.log(this.data.userInfo.openId)
+    // console.log(this.data.userInfo.openId)
   }
 })
