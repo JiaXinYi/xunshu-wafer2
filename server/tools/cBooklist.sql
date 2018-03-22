@@ -18,15 +18,16 @@ SET NAMES utf8;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
---  Table structure for `cSessionInfo`
+--  Table structure for `cBooklist`
 -- ----------------------------
+-- 没有自动执行，复制到数据库执行
 DROP TABLE IF EXISTS `cBooklist`;
 CREATE TABLE `cBooklist` (
   `open_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `uuid` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `book_info` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (`uuid`),
+  PRIMARY KEY (`uuid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='用户保存书单列表';
 
 SET FOREIGN_KEY_CHECKS = 1;

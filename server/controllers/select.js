@@ -1,9 +1,18 @@
 // 教程https://www.jianshu.com/p/072ff89e723c
 const { mysql } = require('../qcloud')
+const uuid = require('node-uuid')
 
 module.exports = async (ctx) => {
-  // var id = ctx.state.$wxInfo.openId;
-  var res = await mysql('cSessionInfo').select('*')
+  var bookinfo = {
+    name: 'javascript设计模式',
+    city: '广东省广州市天河区'
+  }
+  var book = {
+    open_id: 'ogZMb5IsGSKJplkr2igp4Otc6_Kk',
+    uuid: uuid.v1(),
+    book_info: JSON.stringify(bookinfo)
+  }
+  var res = await mysql('cBooklist').insert(book)
     .then(res => {
       ctx.state.code = 0
       ctx.state.data = res
@@ -12,6 +21,15 @@ module.exports = async (ctx) => {
       ctx.state.code = -1
       throw new Error(err)
     })
+  // var res = await mysql('cSessionInfo').select('*')
+  //   .then(res => {
+  //     ctx.state.code = 0
+  //     ctx.state.data = res
+  //   })
+  //   .catch(err => {
+  //     ctx.state.code = -1
+  //     throw new Error(err)
+  //   })
 }
 // const { mysql } = require('../qcloud')
 

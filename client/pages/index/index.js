@@ -9,7 +9,8 @@ Page({
     userInfo: {},
     logged: false,
     takeSession: false,
-    requestResult: ''
+    requestResult: '',
+    openId: ''
   },
 
   // 用户登录示例
@@ -28,6 +29,7 @@ Page({
             userInfo: result,
             logged: true,
           })
+          console.log(result);
         } else {
           // 如果不是首次登录，不会返回用户信息，请求用户信息接口获取
           qcloud.request({
@@ -37,8 +39,11 @@ Page({
               util.showSuccess('登录成功')
               that.setData({
                 userInfo: result.data.data,
-                logged: true
+                logged: true,
+                openId: result.data.data.openId
               })
+              console.log(result);
+              
             },
 
             fail(error) {
@@ -222,6 +227,7 @@ Page({
   doSql() {
     util.showBusy('请求中...')
     var that = this
+    
     qcloud.request({
       url: `${config.service.host}/weapp/select`,
       login: true,
@@ -236,6 +242,5 @@ Page({
         console.log('request fail', error);
       }
     })
-    // console.log(this.data.userInfo.openId)
   }
 })
