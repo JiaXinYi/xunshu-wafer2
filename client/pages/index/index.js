@@ -23,35 +23,34 @@ Page({
     // 调用登录接口
     qcloud.login({
       success(result) {
-        if (result) {
-          util.showSuccess('登录成功')
-          that.setData({
-            userInfo: result,
-            logged: true,
-          })
-          console.log(result);
-        } else {
-          // 如果不是首次登录，不会返回用户信息，请求用户信息接口获取
-          qcloud.request({
-            url: config.service.requestUrl,
-            login: true,
-            success(result) {
-              util.showSuccess('登录成功')
-              that.setData({
-                userInfo: result.data.data,
-                logged: true,
-                openId: result.data.data.openId
-              })
-              console.log(result);
-              
-            },
+        // if (result) {
+        //   util.showSuccess('登录成功')
+        //   that.setData({
+        //     userInfo: result,
+        //     logged: true,
+        //   })
+        //   console.log(result);
+        // } else {
+        // 如果不是首次登录，不会返回用户信息，请求用户信息接口获取
+        qcloud.request({
+          url: config.service.requestUrl,
+          login: true,
+          success(result) {
+            util.showSuccess('登录成功')
+            that.setData({
+              userInfo: result.data.data,
+              logged: true,
+              openId: result.data.data.openId
+            })
+            console.log(result);
+          },
 
-            fail(error) {
-              util.showModel('请求失败', error)
-              console.log('request fail', error)
-            }
-          })
-        }
+          fail(error) {
+            util.showModel('请求失败', error)
+            console.log('request fail', error)
+          }
+        })
+        // }
       },
 
       fail(error) {
@@ -224,23 +223,36 @@ Page({
     this.setData({ tunnelStatus: 'closed' })
   },
 
-  doSql() {
-    util.showBusy('请求中...')
-    var that = this
-    
-    qcloud.request({
-      url: `${config.service.host}/weapp/select`,
-      login: true,
-      success(result) {
-        util.showSuccess('请求成功完成')
-        that.setData({
-          requestResult: JSON.stringify(result.data)
-        })
-      },
-      fail(error) {
-        util.showModel('请求失败', error);
-        console.log('request fail', error);
-      }
+  goAddBook() {
+    wx.navigateTo({
+      url: '../addBook/addBook'
     })
+    // if (!!this.data.openId) {
+    //   wx.navigateTo({
+    //     url: '../addBook/addBook'
+    //   })
+    //   // util.showBusy('请求中...')
+    //   // var that = this
+    //   // qcloud.request({
+    //   //   url: `${config.service.host}/weapp/select`,
+    //   //   login: true,
+    //   //   data: { openId: this.data.openId },
+    //   //   success(result) {
+    //   //     util.showSuccess('请求成功完成')
+    //   //     that.setData({
+    //   //       requestResult: JSON.stringify(result.data)
+    //   //     })
+    //   //   },
+    //   //   fail(error) {
+    //   //     util.showModel('请求失败', error);
+    //   //     console.log('request fail', error);
+    //   //   }
+    //   // })
+    // } else {
+    //   util.showModel('未登录','请先登录');
+    //   // this.login();
+    //   // this.doSql();
+    // }
+
   }
 })

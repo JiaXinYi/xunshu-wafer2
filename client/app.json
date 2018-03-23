@@ -9,7 +9,8 @@
     "pages/account/account",
     "pages/bookstores/bookstores",
     "pages/search/search",
-    "pages/home/home"
+    "pages/home/home",
+    "pages/addBook/addBook"
   ],
   "window": {
     "backgroundTextStyle": "light",

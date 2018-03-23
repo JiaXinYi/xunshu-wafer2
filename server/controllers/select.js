@@ -4,11 +4,11 @@ const uuid = require('node-uuid')
 
 module.exports = async (ctx) => {
   var bookinfo = {
-    name: 'javascript设计模式',
+    name: '基于Ionic的移动APP开发',
     city: '广东省广州市天河区'
   }
   var book = {
-    open_id: 'ogZMb5IsGSKJplkr2igp4Otc6_Kk',
+    open_id: ctx.query.openId,
     uuid: uuid.v1(),
     book_info: JSON.stringify(bookinfo)
   }

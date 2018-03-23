@@ -1,0 +1,26 @@
+<!--pages/addBook/addBook.wxml-->
+<view class="container">
+  <form bindsubmit="formSubmit">
+    <view class="row">
+      <text>书名：</text>
+      <input type="text" name="bookName" placeholder="请输入书名" />
+    </view>
+    <view class="row">
+      <text>作者：</text>
+      <input type="text" name="bookWriter" placeholder="请输入作者" />
+    </view>
+    <view class="row">
+      <text>版本：</text>
+      <input type="text" name="bookYear" placeholder="请输入出版时间或版本" />
+    </view>
+    <!-- <view class="row">
+      <text>描述：</text>
+      <textarea maxlength="160" name="bookDetail" placeholder="请添加一些描述信息:包括新旧程度，书中内容相关等信息">
+      </textarea>
+    </view> -->
+    <view class="row">
+      <button type="primary" form-type="submit">提交</button>
+    </view>
+
+  </form>
+</view>

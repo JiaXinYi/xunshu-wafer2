@@ -48,10 +48,10 @@
     </navigator>
   </view>
 
-  <!-- 上传图片测试 -->
+  <!-- 数据库相关 -->
   <view class="uploader">
-    <view class="uploader-text" bindtap="doSql">
-      <text>数据库查询</text>
+    <view class="uploader-text" bindtap="goAddBook">
+      <text>添加书单</text>
     </view>
   </view>
 </view>
