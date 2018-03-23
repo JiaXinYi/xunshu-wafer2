@@ -4,7 +4,7 @@ const uuid = require('node-uuid')
 
 module.exports = async (ctx) => {
   var bookinfo = {
-    name: '基于Ionic的移动APP开发',
+    name: ctx.query.bookName,
     city: '广东省广州市天河区'
   }
   var book = {

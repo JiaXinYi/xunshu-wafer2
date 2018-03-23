@@ -224,8 +224,9 @@ Page({
   },
 
   goAddBook() {
+    var Id = this.data.openId;
     wx.navigateTo({
-      url: '../addBook/addBook'
+      url: '../addBook/addBook?openId=' + Id
     })
     // if (!!this.data.openId) {
     //   wx.navigateTo({

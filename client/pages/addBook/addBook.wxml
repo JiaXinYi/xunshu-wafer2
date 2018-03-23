@@ -13,11 +13,13 @@
       <text>版本：</text>
       <input type="text" name="bookYear" placeholder="请输入出版时间或版本" />
     </view>
-    <!-- <view class="row">
-      <text>描述：</text>
-      <textarea maxlength="160" name="bookDetail" placeholder="请添加一些描述信息:包括新旧程度，书中内容相关等信息">
+    <view class="row">
+      <text>添加描述：</text>
+    </view>
+    <view>
+      <textarea name="bookDetail" placeholder="请添加一些描述信息:包括新旧程度，书中内容相关等信息">
       </textarea>
-    </view> -->
+    </view>
     <view class="row">
       <button type="primary" form-type="submit">提交</button>
     </view>

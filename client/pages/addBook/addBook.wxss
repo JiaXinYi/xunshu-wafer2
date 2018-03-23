@@ -1,17 +1,19 @@
 /* pages/addBook/addBook.wxss */
 
 page {
-  background: #f6f6f6;
+  background: #fff;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
 .container {
-  padding: 1rem;
-  font-size: 0.9rem;
+  background: #F6F6F6;  
+  margin: 12px auto;
+  padding: 40px;
+  font-size: 1.1rem;
   line-height: 1.5rem;
-  /* border-shadow: 1px 1px #0099CC; */
+  border: 1px solid #ccc;
 }
 
 .row {
@@ -22,11 +24,11 @@ page {
 
 .row text {
   flex-grow: 1;
-  text-align: right;
+  text-align: left;
 }
 
-.row input {
-  font-size: 0.7rem;
+.row input ,textarea{
+  font-size: 0.9rem;
   color: #ccc;
   flex-grow: 3;
   border-bottom: 1px solid #ccc;
@@ -38,16 +40,9 @@ page {
 
 .row input:focus {
   border: 1px solid #09c;
-  color: #0099CC;
+  color: #09c;
 }
 
 .row button {
   padding: 0 2rem;
-}
-
-.row textarea {
-  font-size: 0.7rem;
-  color: #ccc;
-  flex-grow: 3;
-  border: 1px solid #ccc;
 }
