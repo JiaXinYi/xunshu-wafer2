@@ -255,5 +255,11 @@ Page({
     //   // this.doSql();
     // }
 
+  },
+  showAddBook(){
+    var Id = this.data.openId;
+    wx.navigateTo({
+      url: '../showAddBook/showAddBook?openId=' + Id
+    })
   }
 })
