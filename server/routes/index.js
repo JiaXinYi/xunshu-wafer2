@@ -39,4 +39,7 @@ router.get('/demo',controllers.demo)
 
 // 数据库相关操作
 router.get('/select', controllers.select)
+
+// 数据库相关操作
+router.get('/showbook', controllers.showbook)
 module.exports = router

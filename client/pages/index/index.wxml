@@ -53,7 +53,9 @@
     <view class="uploader-text" bindtap="goAddBook">
       <text>添加书单</text>
     </view>
-    <view class="uploader-text" bindtap="showAddBook">
+  </view>
+  <view class="uploader">
+    <view class="uploader-text" bindtap="showAddBook" data-tbname="{{bookTable}}">
       <text>查看书单</text>
     </view>
   </view>

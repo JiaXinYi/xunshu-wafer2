@@ -1,2 +1,12 @@
 <!--pages/showAddBook/showAddBook.wxml-->
-<text>pages/showAddBook/showAddBook.wxml</text>
+<view>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper-box">
+    <block wx:for="{{booklist}}" wx:key="group" >
+      <swiper-item class="slide-item">
+        <image src="{{bookimg}}" class="slide-image" />
+        <view>书名：{{item.name}}</view>
+        <view>所在地区{{item.city}}</view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

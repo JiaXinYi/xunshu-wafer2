@@ -10,7 +10,8 @@ Page({
     logged: false,
     takeSession: false,
     requestResult: '',
-    openId: ''
+    openId: '',
+    bookTable: 'cBooklist'
   },
 
   // 用户登录示例
@@ -256,10 +257,13 @@ Page({
     // }
 
   },
-  showAddBook(){
+  showAddBook(event) {
+    var tbname = event.currentTarget.dataset.tbname;
     var Id = this.data.openId;
+    console.log(tbname, Id);
+    
     wx.navigateTo({
-      url: '../showAddBook/showAddBook?openId=' + Id
+      url: '../showAddBook/showAddBook?openId=' + Id + '&tbname=' + tbname
     })
   }
 })
