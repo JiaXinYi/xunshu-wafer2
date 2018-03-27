@@ -39,7 +39,7 @@ CREATE TABLE `cWantlist` (
   `open_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `uuid` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `book_name` var char(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `book_name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `book_info` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL,
   `states` boolean NOT NULL,
   PRIMARY KEY (`uuid`)
