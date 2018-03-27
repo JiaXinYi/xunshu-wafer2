@@ -26,8 +26,23 @@ CREATE TABLE `cBooklist` (
   `open_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `uuid` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `book_name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `book_info` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `states` boolean NOT NULL,
   PRIMARY KEY (`uuid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='用户保存书单列表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='用户保存拥有的书单列表';
+
+SET FOREIGN_KEY_CHECKS = 1;
+
+DROP TABLE IF EXISTS `cWantlist`;
+CREATE TABLE `cWantlist` (
+  `open_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `uuid` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `book_name` var char(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `book_info` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `states` boolean NOT NULL,
+  PRIMARY KEY (`uuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='用户想交换的书单列表';
 
 SET FOREIGN_KEY_CHECKS = 1;

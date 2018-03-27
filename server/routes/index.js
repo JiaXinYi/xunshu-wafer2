@@ -38,7 +38,7 @@ router.post('/message', controllers.message.post)
 router.get('/demo',controllers.demo)
 
 // 数据库相关操作
-router.get('/select', controllers.select)
+router.get('/addbook', controllers.addbook)
 
 // 数据库相关操作
 router.get('/showbook', controllers.showbook)

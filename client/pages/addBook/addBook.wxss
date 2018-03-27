@@ -27,15 +27,24 @@ page {
   text-align: left;
 }
 
-.row input ,textarea{
+.row input ,.text-detail,.uploader-image{
   font-size: 0.9rem;
   color: #ccc;
-  flex-grow: 3;
   border-bottom: 1px solid #ccc;
-  display: inline-block;
   border-radius: 0.3rem;
   box-shadow: 0 0 0.15rem #aaa;
   padding: 0.3rem;
+}
+.row input {
+  flex-grow: 3;
+  display: inline-block;  
+  
+}
+.text-detail,.uploader-image{
+  flex-grow: 1;
+  display: block;
+  margin-bottom: 1rem;
+  
 }
 
 .row input:focus {

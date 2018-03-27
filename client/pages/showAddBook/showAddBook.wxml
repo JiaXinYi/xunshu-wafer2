@@ -3,9 +3,11 @@
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper-box">
     <block wx:for="{{booklist}}" wx:key="group" >
       <swiper-item class="slide-item">
-        <image src="{{bookimg}}" class="slide-image" />
+        <image src="{{item.imgUrl}}" class="slide-image" />
         <view>书名：{{item.name}}</view>
-        <view>所在地区{{item.city}}</view>
+        <view>作者：{{item.writes}}</view>
+        <view>所在地区：{{item.city}}</view>
+        <!-- <view>描述：{{item.description}}</view> -->
       </swiper-item>
     </block>
   </swiper>

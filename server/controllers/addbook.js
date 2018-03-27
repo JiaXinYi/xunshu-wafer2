@@ -5,11 +5,16 @@ const uuid = require('node-uuid')
 module.exports = async (ctx) => {
   var bookinfo = {
     name: ctx.query.bookName,
-    city: '广东省广州市天河区'
+    writes: ctx.query.bookWriter,
+    imgUrl: ctx.query.imgUrl,
+    city: ctx.query.bookLocation,
+    description: ctx.query.bookDetail
   }
   var book = {
     open_id: ctx.query.openId,
     uuid: uuid.v1(),
+    book_name: ctx.query.bookName,  
+    states:false,
     book_info: JSON.stringify(bookinfo)
   }
   var res = await mysql('cBooklist').insert(book)
