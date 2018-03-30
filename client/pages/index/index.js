@@ -273,5 +273,11 @@ Page({
     wx.navigateTo({
       url: '../addBook/addBook?openId=' + Id + '&tbname=' + tbname
     })
+  },
+  showChangeBook(){
+    var Id = this.data.openId;
+    wx.navigateTo({
+      url: '../changeBook/changeBook?openId=' + Id
+    })
   }
 })

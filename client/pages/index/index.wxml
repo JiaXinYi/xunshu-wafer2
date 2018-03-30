@@ -70,7 +70,7 @@
     </view>
   </view>
   <view class="uploader">
-    <view class="uploader-text" bindtap="showAddBook" data-tbname="{{bookTable}}">
+    <view class="uploader-text" bindtap="showChangeBook">
       <text>谁能和我换</text>
     </view>
   </view>

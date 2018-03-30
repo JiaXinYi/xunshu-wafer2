@@ -18,7 +18,7 @@ module.exports = async (ctx) => {
     states:false,
     book_info: JSON.stringify(bookinfo)
   }
-  var res = await mysql(tbname).insert(book)
+  await mysql(tbname).insert(book)
     .then(res => {
       ctx.state.code = 0
       ctx.state.data = res
