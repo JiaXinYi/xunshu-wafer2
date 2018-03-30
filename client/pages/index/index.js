@@ -11,7 +11,8 @@ Page({
     takeSession: false,
     requestResult: '',
     openId: '',
-    bookTable: 'cBooklist'
+    bookTable: 'cBooklist',
+    wantBookTable: 'cWantlist'
   },
 
   // 用户登录示例
@@ -224,10 +225,11 @@ Page({
     this.setData({ tunnelStatus: 'closed' })
   },
 
-  goAddBook() {
+  goAddBook(event) {
     var Id = this.data.openId;
+    var tbname = event.currentTarget.dataset.tbname;
     wx.navigateTo({
-      url: '../addBook/addBook?openId=' + Id
+      url: '../addBook/addBook?openId=' + Id + '&tbname=' + tbname
     })
     // if (!!this.data.openId) {
     //   wx.navigateTo({
@@ -258,12 +260,18 @@ Page({
 
   },
   showAddBook(event) {
-    var tbname = event.currentTarget.dataset.tbname;
     var Id = this.data.openId;
+    var tbname = event.currentTarget.dataset.tbname;
     console.log(tbname, Id);
-    
     wx.navigateTo({
       url: '../showAddBook/showAddBook?openId=' + Id + '&tbname=' + tbname
+    })
+  },
+  goAddWantBook(event) {
+    var Id = this.data.openId;
+    var tbname = event.currentTarget.dataset.tbname;
+    wx.navigateTo({
+      url: '../addBook/addBook?openId=' + Id + '&tbname=' + tbname
     })
   }
 })

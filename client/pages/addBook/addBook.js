@@ -8,11 +8,16 @@ Page({
     focus: false,
     inputValue: '',
     openId:'',
+    tbname:'',
     imgUrl:'../../imgs/logo.png'
   },
   onLoad: function (options) {
     this.setData({
-      openId: options.openId
+      openId: options.openId,
+      tbname:options.tbname
+    })
+    wx.setNavigationBarTitle({
+      title: this.data.tbname == 'cBooklist' ? '添加我有的书' : '添加想要的书'//页面标题为路由参数
     })
   },
   bindButtonTap: function () {
@@ -85,6 +90,7 @@ Page({
     })
   },
   formSubmit(e) {
+    e.detail.value.tbname = this.data.tbname;
     e.detail.value.openId = this.data.openId;
     e.detail.value.imgUrl = this.data.imgUrl;
     console.log(e.detail.value);

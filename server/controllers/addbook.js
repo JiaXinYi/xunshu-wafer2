@@ -3,6 +3,7 @@ const { mysql } = require('../qcloud')
 const uuid = require('node-uuid')
 
 module.exports = async (ctx) => {
+  var tbname = ctx.query.tbname;
   var bookinfo = {
     name: ctx.query.bookName,
     writes: ctx.query.bookWriter,
@@ -17,7 +18,7 @@ module.exports = async (ctx) => {
     states:false,
     book_info: JSON.stringify(bookinfo)
   }
-  var res = await mysql('cBooklist').insert(book)
+  var res = await mysql(tbname).insert(book)
     .then(res => {
       ctx.state.code = 0
       ctx.state.data = res

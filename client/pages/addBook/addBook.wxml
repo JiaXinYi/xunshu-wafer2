@@ -1,5 +1,6 @@
 <!--pages/addBook/addBook.wxml-->
 <view class="container">
+<!-- <text>{{tbname=='cBooklist'?'添加我有的书':'添加想要的书'}}</text> -->
   <form bindsubmit="formSubmit">
     <view class="row">
       <text>书名：</text>
