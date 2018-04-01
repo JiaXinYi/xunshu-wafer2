@@ -12,5 +12,4 @@ module.exports = async (ctx, next) => {
       ctx.state.code = -1
       throw new Error(err)
     })
-    console.log(res);
 }

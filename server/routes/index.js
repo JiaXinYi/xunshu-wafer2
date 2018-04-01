@@ -42,4 +42,7 @@ router.get('/addbook', controllers.addbook)
 
 // 数据库相关操作
 router.get('/showbook', controllers.showbook)
+
+router.get('/selectbook', controllers.selectbook)
+
 module.exports = router
