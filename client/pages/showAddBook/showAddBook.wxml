@@ -1,7 +1,7 @@
 <!--pages/showAddBook/showAddBook.wxml-->
-<view>
+<view class="bookswiper">
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper-box">
-    <block wx:for="{{booklist}}" wx:key="group" >
+    <block wx:for="{{booklist}}" wx:key="group">
       <swiper-item class="slide-item">
         <image src="{{item.imgUrl}}" class="slide-image" />
         <view>书名：{{item.name}}</view>
@@ -11,4 +11,18 @@
       </swiper-item>
     </block>
   </swiper>
+</view>
+<view>
+  <view wx:for="{{booklist}}" class="booklist">
+    <view class="bookname">{{item.name}}</view>
+    <view class="bookinfo">
+      <view class="infoitem">
+        作者：{{item.writes}}
+      </view>
+      <view class="infoitem">
+        地区：{{item.city}}
+      </view>
+
+    </view>
+  </view>
 </view>

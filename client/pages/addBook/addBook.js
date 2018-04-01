@@ -89,6 +89,7 @@ Page({
       }
     })
   },
+  // 提交数据
   formSubmit(e) {
     e.detail.value.tbname = this.data.tbname;
     e.detail.value.openId = this.data.openId;

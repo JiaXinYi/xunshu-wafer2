@@ -1,4 +1,8 @@
 // pages/account/account.js
+// wafer2-client-sdk用法：https://cloud.tencent.com/document/product/619/11449
+var qcloud = require('../../vendor/wafer2-client-sdk/index')
+var config = require('../../config')
+var util = require('../../utils/util.js')
 Page({
 
   /**
@@ -6,7 +10,11 @@ Page({
    */
   data: {
     hasUserInfo: false,
-    userInfo: 'ddd'
+    userInfo: {},
+    logged: false,
+    openId: '',
+    bookTable: 'cBooklist',
+    wantBookTable: 'cWantlist'
 
   },
 
@@ -66,35 +74,52 @@ Page({
 
   },
   login: function () {
-    var that = this;
-    wx.showToast({
-      title: '正在登录...',
-      icon: 'loading',
-      duration: 10000
-    });
-    wx.login({
-      success: function (res) {
-        // if(res.code){
-        //   wx.request({
-        //     url: '',
-        //     data:{
-        //       code:res.code
-        //     }
-        //   })
-        // }
-        wx.getUserInfo({
-          success: function (res) {
-            console.log(res.userInfo);
-            
+    if (this.data.logged) return
+
+    util.showBusy('正在登录')
+    var that = this
+
+    // 调用登录接口
+    qcloud.login({
+      success(result) {
+        qcloud.request({
+          url: config.service.requestUrl,
+          login: true,
+          success(result) {
+            util.showSuccess('登录成功')
             that.setData({
-              userInfo: res.userInfo,
-              hasUserInfo: true
+              hasUserInfo: true,
+              userInfo: result.data.data,
+              logged: true,
+              openId: result.data.data.openId
             })
-            wx.hideToast();
+            console.log(result);
+          },
+          fail(error) {
+            util.showModel('请求失败', error)
+            console.log('request fail', error)
           }
         })
-      }
+        // }
+      },
 
+      fail(error) {
+        util.showModel('登录失败', error)
+        console.log('登录失败', error)
+      }
     })
-  }
+  },
+  showAddBook(event) {
+    if (!!this.data.openId) {
+      var Id = this.data.openId;
+      var tbname = event.currentTarget.dataset.tbname;
+      console.log(tbname, Id);
+      wx.navigateTo({
+        url: '../showAddBook/showAddBook?openId=' + Id + '&tbname=' + tbname
+      })
+    } else {
+      util.showModel('未登录', '请先登录');
+    }
+
+  },
 })

@@ -50,16 +50,6 @@
 
   <!-- 数据库相关 -->
   <view class="uploader">
-    <view class="uploader-text" bindtap="goAddBook" data-tbname="{{bookTable}}">
-      <text>添加我的书籍</text>
-    </view>
-  </view>
-  <view class="uploader">
-    <view class="uploader-text" bindtap="goAddWantBook" data-tbname="{{wantBookTable}}">
-      <text>添加想要的书籍</text>
-    </view>
-  </view>
-  <view class="uploader">
     <view class="uploader-text" bindtap="showAddBook" data-tbname="{{bookTable}}">
       <text>我的书单</text>
     </view>
@@ -69,6 +59,17 @@
       <text>愿望书单</text>
     </view>
   </view>
+  <view class="uploader">
+    <view class="uploader-text" bindtap="goAddBook" data-tbname="{{bookTable}}">
+      <text>添加我的书籍</text>
+    </view>
+  </view>
+  <view class="uploader">
+    <view class="uploader-text" bindtap="goAddWantBook" data-tbname="{{wantBookTable}}">
+      <text>添加想要的书籍</text>
+    </view>
+  </view>
+
   <view class="uploader">
     <view class="uploader-text" bindtap="showChangeBook">
       <text>谁能和我换</text>

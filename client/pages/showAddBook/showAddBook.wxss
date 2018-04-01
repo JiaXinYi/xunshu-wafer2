@@ -1,4 +1,5 @@
 /* pages/showAddBook/showAddBook.wxss */
+
 .group-title {
   text-align: center;
   color: #1296db;
@@ -14,9 +15,31 @@
   /* width: 100%;
   margin: 0 auto; */
   text-align: center;
+  font-size: 32rpx;
 }
 
 .slide-image {
   width: 220px;
   height: 300px;
+}
+
+.booklist {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 4px 12px;
+}
+
+.bookname {
+  color: #1296db;
+  font-size: 36rpx;
+}
+
+.bookinfo {
+  display: flex;
+  font-size: 30rpx;
+  justify-content: flex-start;
+}
+
+.infoitem {
+  width: 50%;
 }
