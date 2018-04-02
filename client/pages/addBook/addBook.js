@@ -107,6 +107,9 @@ Page({
         that.setData({
           requestResult: JSON.stringify(result.data)
         })
+        wx.navigateBack({
+          changed: true 
+        })
       },
       fail(error) {
         util.showModel('请求失败', error);

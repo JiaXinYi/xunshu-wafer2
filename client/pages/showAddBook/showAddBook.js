@@ -73,7 +73,33 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this
+    var value = {
+      openId: this.data.openId,
+      tbname: this.data.tbname
+    }
+    qcloud.request({
+      url: `${config.service.host}/weapp/showbook`,
+      login: true,
+      data: value,
+      success(result) {
+        // util.showSuccess('请求成功完成')
+        // console.log(result);
+        var len = result.data.data.length;
+        var list = [];
+        for (var i = 0; i < len; i++) {
+          list.push(JSON.parse(result.data.data[i].book_info));
+        }
+        that.setData({
+          booklist: list,
+          requestResult: JSON.stringify(result.data)
+        })
+      },
+      fail(error) {
+        util.showModel('请求失败', error);
+        console.log('request fail', error);
+      }
+    })
   },
 
   /**
@@ -109,5 +135,12 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  showAddBook(event) {
+    var Id = this.data.openId;
+    var tbname = this.data.tbname;
+    wx.navigateTo({
+      url: '../addBook/addBook?openId=' + Id + '&tbname=' + tbname
+    })
+  },
 })

@@ -1,9 +1,7 @@
-<!--pages/account/account.wxml-->
-<button bindtap='login' wx:if="{{!hasUserInfo}}">使用微信登录</button>
-<view wx:if="{{hasUserInfo}}">
-  <view class="userinfo">
-    <image src="{{userInfo.avatarUrl}}" background-size="cover" class="userinfo-avatar"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+<view>
+  <view class="userinfo" bindtap='login'>
+    <image src="{{logged ? userInfo.avatarUrl : './user-unlogin.png'}}" background-size="cover" class="userinfo-avatar"></image>
+    <text class="userinfo-nickname">{{logged ?userInfo.nickName:'使用微信登录'}}</text>
   </view>
   <view class="collections">
     <view class="collection">
