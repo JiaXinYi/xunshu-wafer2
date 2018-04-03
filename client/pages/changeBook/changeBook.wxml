@@ -1,2 +1,19 @@
 <!--pages/changeBook/changeBook.wxml-->
-<text>pages/changeBook/changeBook.wxml</text>
+  <view wx:for="{{booklist}}" class="booklist">
+    <view>
+      <image src="{{item.imgUrl}}" class="bookimg" />
+    </view>
+    <view class="bookinfo">
+      <view class="bookname">{{item.name}}</view>
+      <view >
+        <view>
+          作者：{{item.writes}}
+        </view>
+        <view>
+          地区：{{item.city}}
+        </view>
+      </view>
+      <view class="changebtn" bindtap="changeBook" data-openid="{{item.openId}}">和TA换</view>
+    </view>
+
+  </view>

@@ -9,25 +9,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    booklist: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    qcloud.request({
-      url: `${config.service.host}/weapp/selectbook`,
-      login: false,
-      data:'',
-      success(result) {
-        console.log(result);
-      },
-      fail(error) {
-        util.showModel('请求失败', error);
-        console.log('request error', error);
-      }
-
+    var list = JSON.parse(options.booklist);
+    var len = list.length;
+    var targetlist = [];
+    for(var i = 0;i<len;i++){
+      targetlist[i] = JSON.parse(list[i].book_info);
+      targetlist[i].openId = list[i].open_id;
+    }
+    console.log(targetlist);
+    this.setData({
+      booklist: targetlist
     })
   },
 
@@ -78,5 +76,16 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  changeBook(event){
+      var openId= event.currentTarget.dataset.openid;
+      //注意是小写
+      console.log(openId);
+      if(!!openId){
+        wx.showModal({
+          title: '是否要和对方交换？',
+          content: openId,
+        })
+      }
   }
 })

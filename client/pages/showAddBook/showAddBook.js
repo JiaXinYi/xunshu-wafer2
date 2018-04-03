@@ -143,7 +143,8 @@ Page({
       url: '../addBook/addBook?openId=' + Id + '&tbname=' + tbname
     })
   },
-  changeBook(event){
+  changeBook(event) {
+    var that = this
     var bookname = event.currentTarget.dataset.bookname;
     var value = {
       bookname: bookname
@@ -153,16 +154,27 @@ Page({
       login: false,
       data: value,
       success(result) {
-        console.log(result.data.data);
         var booklist = result.data.data;
+        var targetlist = [];
         var len = result.data.data.length;
-        if(!!len){
-          
-        }else{
-          util.showModel('请求成功','但是没有能匹配的书籍');
-          
+        if (!!len) {
+          for (var i = 0; i < len; i++) {
+            //筛选掉自己发布的
+            if (booklist.open_id !== that.data.openId) {
+              targetlist.push(booklist[i]);
+            }
+          }
+          if (!!targetlist.length) {
+            // console.log(JSON.stringify(targetlist));
+            wx.navigateTo({
+              url: '../changeBook/changeBook?booklist=' + JSON.stringify(targetlist),
+            })
+          } else {
+            util.showModel('请求成功', '但是没有能匹配的书籍');
+          }
+        } else {
+          util.showModel('请求成功', '但是没有能匹配的书籍');
         }
-
       },
       fail(error) {
         util.showModel('请求失败', error);
