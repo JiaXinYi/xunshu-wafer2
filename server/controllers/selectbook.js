@@ -1,6 +1,6 @@
 const { mysql } = require('../qcloud')
 module.exports = async (ctx) => {
-  var bookname = 'ssss';
+  var bookname = ctx.query.bookname;
   await mysql('cBooklist').select('*').where('book_name', bookname)
     .then(res => {
       ctx.state.code = 0;

@@ -12,7 +12,7 @@
   </swiper>
 </view> -->
 <view>
-<view class="addbtn" bindtap="showAddBook">添加</view>
+<view class="addbtn" bindtap="showAddBook">+</view>
   <view wx:for="{{booklist}}" class="booklist">
     <view>
       <image src="{{item.imgUrl}}" class="bookimg" />
@@ -27,6 +27,7 @@
           地区：{{item.city}}
         </view>
       </view>
+      <view class="changebtn" bindtap="changeBook" data-bookname="{{item.name}}" wx:if="{{tbname == 'cWantlist'}}">谁能和我换</view>
     </view>
 
   </view>

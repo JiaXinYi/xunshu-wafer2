@@ -27,10 +27,10 @@
     "backgroundColor": "#fff",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "登录",
-        "iconPath": "imgs/index-1.png",
-        "selectedIconPath": "imgs/index.png"
+        "pagePath": "pages/account/account",
+        "text": "我的",
+        "iconPath": "imgs/account-1.png",
+        "selectedIconPath": "imgs/account.png"
       },
       {
         "pagePath": "pages/home/home",
@@ -45,10 +45,10 @@
         "selectedIconPath": "imgs/earth.png"
       },
       {
-        "pagePath": "pages/account/account",
-        "text": "我的",
-        "iconPath": "imgs/account-1.png",
-        "selectedIconPath": "imgs/account.png"
+        "pagePath": "pages/index/index",
+        "text": "登录",
+        "iconPath": "imgs/index-1.png",
+        "selectedIconPath": "imgs/index.png"
       }
     ]
   }

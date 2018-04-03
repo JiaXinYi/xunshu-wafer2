@@ -36,7 +36,7 @@ Page({
       openId: options.openId,
       tbname: options.tbname
     }
-    console.log(value);
+    // console.log(value);
     qcloud.request({
       url: `${config.service.host}/weapp/showbook`,
       login: true,
@@ -49,7 +49,7 @@ Page({
         for (var i = 0; i < len; i++) {
           list.push(JSON.parse(result.data.data[i].book_info));
         }
-        console.log(list);
+        // console.log(list);
         that.setData({
           booklist: list,
           requestResult: JSON.stringify(result.data)
@@ -143,4 +143,32 @@ Page({
       url: '../addBook/addBook?openId=' + Id + '&tbname=' + tbname
     })
   },
+  changeBook(event){
+    var bookname = event.currentTarget.dataset.bookname;
+    var value = {
+      bookname: bookname
+    }
+    qcloud.request({
+      url: `${config.service.host}/weapp/selectbook`,
+      login: false,
+      data: value,
+      success(result) {
+        console.log(result.data.data);
+        var booklist = result.data.data;
+        var len = result.data.data.length;
+        if(!!len){
+          
+        }else{
+          util.showModel('请求成功','但是没有能匹配的书籍');
+          
+        }
+
+      },
+      fail(error) {
+        util.showModel('请求失败', error);
+        console.log('request error', error);
+      }
+
+    })
+  }
 })
