@@ -167,7 +167,7 @@ Page({
           if (!!targetlist.length) {
             // console.log(JSON.stringify(targetlist));
             wx.navigateTo({
-              url: '../changeBook/changeBook?booklist=' + JSON.stringify(targetlist),
+              url: '../changeBook/changeBook?booklist=' + JSON.stringify(targetlist) +'&openId=' + that.data.openId,
             })
           } else {
             util.showModel('请求成功', '但是没有能匹配的书籍');

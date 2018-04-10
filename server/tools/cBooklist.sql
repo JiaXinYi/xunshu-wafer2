@@ -46,3 +46,17 @@ CREATE TABLE `cWantlist` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='用户想交换的书单列表';
 
 SET FOREIGN_KEY_CHECKS = 1;
+
+
+DROP TABLE IF EXISTS `cMessagelist`;
+CREATE TABLE `cMessagelist` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `from_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `to_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `message_text` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `states` boolean NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='信息列表';
+
+SET FOREIGN_KEY_CHECKS = 1;

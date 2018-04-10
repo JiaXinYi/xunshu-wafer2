@@ -12,7 +12,9 @@
     "pages/home/home",
     "pages/addBook/addBook",
     "pages/showAddBook/showAddBook",
-    "pages/changeBook/changeBook"
+    "pages/changeBook/changeBook",
+    "pages/msgList/msgList",
+    "pages/msgDetail/msgDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -45,4 +45,9 @@ router.get('/showbook', controllers.showbook)
 
 router.get('/selectbook', controllers.selectbook)
 
+// 数据库相关操作
+router.get('/readmsg', controllers.readmsg)
+
+router.get('/sendmsg', controllers.sendmsg)
+
 module.exports = router
