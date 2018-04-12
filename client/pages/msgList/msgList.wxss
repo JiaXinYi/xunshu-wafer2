@@ -1,5 +1,30 @@
 /* pages/msgList/msgList.wxss */
-.msglist{
-  height: 60px;
+
+.msglist {
+  height: 48px;
   border-bottom: 1px solid silver;
+  font-size: 36rpx;
+  line-height: 48px;
+  display: flex;
+  padding-left: 12px;
+  justify-content: space-between;
+}
+
+image {
+  width: 24px;
+  height: 24px;
+}
+
+.list-text {
+  color: #333;
+}
+
+.list-img {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  /* border: 1px solid #eee; */
+  background-color: red;
+  margin-top: 12px;
+  margin-right: 12px;
 }

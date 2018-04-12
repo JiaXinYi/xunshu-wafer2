@@ -23,10 +23,12 @@ Page({
     this.setData({
       openId: fromId
     })
+    wx.setNavigationBarTitle({
+      title: '消息列表',
+    })
     var value = {
       fromId: fromId
     }
-
     qcloud.request({
       url: `${config.service.host}/weapp/myrecivelist`,
       login: false,

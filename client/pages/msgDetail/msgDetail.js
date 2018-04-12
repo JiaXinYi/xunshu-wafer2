@@ -24,23 +24,19 @@ Page({
       fromId: options.fromId,
       toId: options.toId
     }
-    qcloud.request({
-      url: `${config.service.host}/weapp/mysendlist`,
-      login: false,
-      data: value,
-      success(result) {
-        console.log(result);
-        let msg = result.data.data.msg;
-        that.setData({
-          msgData: msg,
-          fromId: options.fromId,
-          toId: options.toId
-        })
-      },
-      fail(err) {
-        console.log(err);
-      }
+    wx.setNavigationBarTitle({
+      title: value.toId,
     })
+    that.setData({
+      fromId: options.fromId,
+      toId: options.toId
+    })
+    that.doLoadMsg(value);
+    setTimeout(() => {
+      that.doLoadMsg(value);
+      // this.scrollToBottom();
+    }, 8000);
+
 
   },
 
@@ -92,13 +88,14 @@ Page({
   onShareAppMessage: function () {
 
   },
-  bindKeyInput(event){
+  bindKeyInput(event) {
     this.setData({
       message: event.detail.value
     })
   },
   sendmsg() {
     //书籍拥有者的id
+    var that = this
     if (!!this.data.message) {
       var value = {
         toId: this.data.toId,
@@ -111,7 +108,10 @@ Page({
         data: value,
         success(result) {
           console.log('发送成功');
-          
+          that.doLoadMsg(value);
+          this.setData({
+            message: ''
+          })
           // qcloud.request({
           //   url: `${config.service.host}/weapp/readmsg`,
           //   login: false,
@@ -129,9 +129,33 @@ Page({
           console.log(err);
         }
       })
-    }else{
+    } else {
       console.log('请输入信息')
     }
 
+  },
+  doLoadMsg(value) {
+    var that = this
+    qcloud.request({
+      url: `${config.service.host}/weapp/mysendlist`,
+      login: false,
+      data: value,
+      success(result) {
+        console.log(result);
+        let msg = result.data.data.msg;
+        that.setData({
+          msgData: msg
+        })
+        // wx.createSelectorQuery().select('#msg-box').boundingClientRect(function (rect) {
+        //   // 使页面滚动到底部
+        //   wx.pageScrollTo({
+        //     scrollTop: rect.bottom
+        //   })
+        // }).exec()
+      },
+      fail(err) {
+        console.log(err);
+      }
+    })
   }
 })

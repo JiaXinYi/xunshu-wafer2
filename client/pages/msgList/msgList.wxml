@@ -1,10 +1,12 @@
 <!--pages/msgList/msgList.wxml-->
-<text>消息列表</text>
 <view>
   <view wx:for="{{personData}}">
     <view bindtap='sendmsg' class="msglist" data-id="{{item}}">
-      <view>{{item}}</view>
-      <text>点击发消息</text>
+      <view class="list-text">
+        <image src='../../imgs/rfq.png'></image>
+        给对方发消息
+        </view>
+      <view class="list-img"></view>
     </view>
   </view>
 </view>

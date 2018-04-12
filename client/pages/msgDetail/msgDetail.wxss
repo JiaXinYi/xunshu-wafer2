@@ -1,13 +1,19 @@
 /* pages/msgDetail/msgDetail.wxss */
 
-.message-wrapper {
-  position: relative;
-  display: block;
+.message-box {
+    height: 100%;
+  width: 100%;
+   margin-bottom: 80px; 
 }
 
-.meaasge-wrapper:last-child {
-  margin-bottom: 10px;
+.message-wrapper {
+  position: relative;
+  margin-top: 10px;
 }
+
+/* .meaasge-wrapper:last-child {
+  margin-bottom: 10px;
+} */
 
 .message-pic {
   width: 48px;
@@ -70,21 +76,23 @@
 }
 
 .send-box {
-  position: absolute;
+  position: fixed;
   width: 100%;
   bottom: 0;
-  /* background-color: #ddd; */
+  background-color: #ddd;
   border: 1px solid #ddd;
   display: flex;
+  height: 48px;
+  
 }
 
 .send-input {
   border-radius: 10px;
   width: 80%;
   vertical-align: middle;
-  height: 2.58823529em;
-  min-height: 2.58823529em;
-  line-height: 2.58823529em;
+  height: 48px;
+  min-height: 48px;
+  line-height: 48px;
 }
 
 .send-btn {

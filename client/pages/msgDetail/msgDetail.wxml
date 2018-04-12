@@ -1,6 +1,7 @@
 <!--pages/msgDetail/msgDetail.wxml-->
 <!-- <text>pages/msgDetail/msgDetail.wxml</text> -->
-<view>
+<!-- <scroll-view scroll-y style="height: 200px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}"> -->
+<view id="msg-box" class="message-box ">
   <view wx:for="{{msgData}}" class="message-wrapper">
     <!-- <text>{{item.message_text}}</text> -->
     <view wx:if="{{item.from_id==toId}}" class="message-item">
@@ -8,7 +9,7 @@
       <view class="message-pic left"></view>
       <view class="chat-bubble left">
         <view class="message">
-          <!-- {{item.from_id}} -->
+          <!-- {{item.states}}  -->
         </view>
         <view class="message-detail">
           {{item.message_text}}
@@ -22,7 +23,7 @@
       <view class="message-pic right"></view>
       <view class="chat-bubble right">
         <view class="message">
-          <!-- {{item.from_id}} -->
+          <!-- {{item.states}}  -->
         </view>
         <view class="message-detail">
           {{item.message_text}}
@@ -31,11 +32,10 @@
       <span class="span-name right">我</span>
     </view>
     <view class="cf"></view>
-    <!-- <input type='text' placeholder='输入消息' class="send-input" bindinput="bindKeyInput"></input>
-<button bindtap="sendmsg" class="send-btn" type="primary">发送</button> -->
   </view>
 </view>
+
 <view class="send-box">
-  <input type='text' placeholder='输入消息' class="send-input" bindinput="bindKeyInput"></input>
+  <input type='text' placeholder='输入消息' class="send-input" bindinput="bindKeyInput" value="{{message}}"></input>
   <button bindtap="sendmsg" class="send-btn" type="primary">发送</button>
 </view>

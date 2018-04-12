@@ -84,28 +84,20 @@ Page({
     //书籍拥有者的id
     var value = {
       toId: event.currentTarget.dataset.openid,
-      fromId: this.data.openId
+      fromId: this.data.openId,
+      message: '开始换书~'
     }
     qcloud.request({
       url: `${config.service.host}/weapp/sendmsg`,
       login: false,
       data: value,
-      success(result){
+      success(result) {
         console.log('发送成功');
-        qcloud.request({
-          url:`${config.service.host}/weapp/readmsg`,
-          login:false,
-          data:value,
-          success(result){
-            console.log(result);
-          },
-          fail(err){
-            console.log(err);
-            
-          }
+        wx.navigateTo({
+          url: '../msgDetail/msgDetail?fromId=' + value.fromId + '&toId=' + value.toId
         })
       },
-      fail(err){
+      fail(err) {
         console.log(err);
 
       }
