@@ -95,7 +95,7 @@ Page({
               logged: true,
               openId: result.data.data.openId
             })
-            console.log(result);
+            // console.log(result);
           },
           fail(error) {
             util.showModel('请求失败', error)
@@ -124,4 +124,14 @@ Page({
     }
 
   },
+  showMessageList(event){
+    if (!!this.data.openId) {
+      var Id = this.data.openId;
+      wx.navigateTo({
+        url: '../msgList/msgList?openId=' + Id
+      })
+    } else {
+      util.showModel('未登录', '请先登录');
+    }
+  }
 })

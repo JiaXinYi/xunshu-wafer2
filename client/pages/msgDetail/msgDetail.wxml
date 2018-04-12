@@ -1,2 +1,41 @@
 <!--pages/msgDetail/msgDetail.wxml-->
-<text>pages/msgDetail/msgDetail.wxml</text>
+<!-- <text>pages/msgDetail/msgDetail.wxml</text> -->
+<view>
+  <view wx:for="{{msgData}}" class="message-wrapper">
+    <!-- <text>{{item.message_text}}</text> -->
+    <view wx:if="{{item.from_id==toId}}" class="message-item">
+      <!-- <img [src]="toUs.pic" alt="客服" class="message-pic left"> -->
+      <view class="message-pic left"></view>
+      <view class="chat-bubble left">
+        <view class="message">
+          <!-- {{item.from_id}} -->
+        </view>
+        <view class="message-detail">
+          {{item.message_text}}
+        </view>
+      </view>
+      <span class="span-name left">客服</span>
+
+    </view>
+    <view wx:if="{{item.from_id==fromId}}">
+      <!-- <img [src]="user.pic" alt="我" class="message-pic right"> -->
+      <view class="message-pic right"></view>
+      <view class="chat-bubble right">
+        <view class="message">
+          <!-- {{item.from_id}} -->
+        </view>
+        <view class="message-detail">
+          {{item.message_text}}
+        </view>
+      </view>
+      <span class="span-name right">我</span>
+    </view>
+    <view class="cf"></view>
+    <!-- <input type='text' placeholder='输入消息' class="send-input" bindinput="bindKeyInput"></input>
+<button bindtap="sendmsg" class="send-btn" type="primary">发送</button> -->
+  </view>
+</view>
+<view class="send-box">
+  <input type='text' placeholder='输入消息' class="send-input" bindinput="bindKeyInput"></input>
+  <button bindtap="sendmsg" class="send-btn" type="primary">发送</button>
+</view>

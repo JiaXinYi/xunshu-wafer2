@@ -21,7 +21,7 @@
 
     </view>
 
-    <view class="collection">
+    <view class="collection"bindtap="showMessageList" data-tbname="{{openId}}">
       <image src='../../imgs/map.png'></image>
       <text>我的信息</text>
 

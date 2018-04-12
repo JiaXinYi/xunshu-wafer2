@@ -48,6 +48,10 @@ router.get('/selectbook', controllers.selectbook)
 // 数据库相关操作
 router.get('/readmsg', controllers.readmsg)
 
+//发送信息
 router.get('/sendmsg', controllers.sendmsg)
-
+//读取我发送和接收的信息详情
+router.get('/mysendlist', controllers.mysendlist)
+//读取发送人和接收人为我的相关人员
+router.get('/myrecivelist', controllers.myrecivelist)
 module.exports = router

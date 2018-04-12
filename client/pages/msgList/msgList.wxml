@@ -1,2 +1,10 @@
 <!--pages/msgList/msgList.wxml-->
-<text>给ID520发消息</text>
+<text>消息列表</text>
+<view>
+  <view wx:for="{{personData}}">
+    <view bindtap='sendmsg' class="msglist" data-id="{{item}}">
+      <view>{{item}}</view>
+      <text>点击发消息</text>
+    </view>
+  </view>
+</view>

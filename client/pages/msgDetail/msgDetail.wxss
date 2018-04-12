@@ -1,1 +1,92 @@
 /* pages/msgDetail/msgDetail.wxss */
+
+.message-wrapper {
+  position: relative;
+  display: block;
+}
+
+.meaasge-wrapper:last-child {
+  margin-bottom: 10px;
+}
+
+.message-pic {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  display: block;
+  background-color: #ddd;
+}
+
+.message-pic.left {
+  left: 10px;
+}
+
+.message-pic.right {
+  right: 10px;
+}
+
+.chat-bubble {
+  font-size: 16px;
+  border-radius: 5px;
+  max-width: 62%;
+  padding: 10px 16px;
+  margin: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.chat-bubble.left {
+  float: left;
+  background-color: #db4e4e;
+  margin-left: 68px;
+}
+
+.chat-bubble.right {
+  float: right;
+  background-color: #8080ff;
+  margin-right: 68px;
+}
+
+.span-name {
+  font-size: 14px;
+  text-align: center;
+  position: absolute;
+  display: block;
+  margin-top: 60px;
+}
+
+.span-name.left {
+  left: 20px;
+}
+
+.span-name.right {
+  right: 27px;
+}
+
+.cf {
+  clear: both !important;
+}
+
+.send-box {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  /* background-color: #ddd; */
+  border: 1px solid #ddd;
+  display: flex;
+}
+
+.send-input {
+  border-radius: 10px;
+  width: 80%;
+  vertical-align: middle;
+  height: 2.58823529em;
+  min-height: 2.58823529em;
+  line-height: 2.58823529em;
+}
+
+.send-btn {
+  width: 20%;
+}

@@ -1,9 +1,9 @@
 const { mysql } = require('../qcloud');
 module.exports = async (ctx) => {
   var msg={
-    from_id:'ogZMb5IsGSKJplkr2igp4Otc6_Kk',
-    to_id:'520',
-    message_text:'嗨，你好呀！',
+    from_id: ctx.query.fromId,
+    to_id:ctx.query.toId,
+    message_text: ctx.query.message,
     states:false
   }
   await mysql('cMessagelist').insert(msg)
