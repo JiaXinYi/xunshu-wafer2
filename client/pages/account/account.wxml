@@ -4,11 +4,11 @@
     <text class="userinfo-nickname">{{logged ?userInfo.nickName:'使用微信登录'}}</text>
   </view>
   <view class="collections">
-    <view class="collection">
+    <!-- <view class="collection">
       <image src='../../imgs/map.png'></image>
       <text>我的收藏</text>
 
-    </view>
+    </view> -->
     <view class="collection" bindtap="showAddBook" data-tbname="{{bookTable}}">
       <image src='../../imgs/map.png'></image>
       <text>我的书籍</text>
