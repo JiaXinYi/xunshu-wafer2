@@ -12,7 +12,8 @@ Page({
     fromId: '',
     toId: '',
     msgData: [],
-    message: ''
+    message: '',
+    toView: ''
   },
 
   /**
@@ -24,9 +25,20 @@ Page({
       fromId: options.fromId,
       toId: options.toId
     }
-    wx.setNavigationBarTitle({
-      title: value.toId,
-    })
+    if (value.fromId == "ogZMb5IsGSKJplkr2igp4Otc6_Kk" && value.toId == "ogZMb5DTIe6bCdW4ZmHXgMRkrc4s") {
+      wx.setNavigationBarTitle({
+        title: '最爱的宝宝',
+      })
+    } else if (value.fromId == "ogZMb5DTIe6bCdW4ZmHXgMRkrc4s" && value.toId == "ogZMb5IsGSKJplkr2igp4Otc6_Kk") {
+      wx.setNavigationBarTitle({
+        title: '最爱的宝贝',
+      })
+    } else {
+      wx.setNavigationBarTitle({
+        title: value.toId,
+      })
+    }
+
     that.setData({
       fromId: options.fromId,
       toId: options.toId
@@ -35,7 +47,7 @@ Page({
     setTimeout(() => {
       that.doLoadMsg(value);
       // this.scrollToBottom();
-    }, 8000);
+    }, 1000);
 
 
   },
@@ -109,7 +121,7 @@ Page({
         success(result) {
           console.log('发送成功');
           that.doLoadMsg(value);
-          this.setData({
+          that.setData({
             message: ''
           })
           // qcloud.request({
@@ -144,14 +156,10 @@ Page({
         console.log(result);
         let msg = result.data.data.msg;
         that.setData({
-          msgData: msg
+          msgData: msg,
+          toView: 'msg-' + msg[msg.length - 1].id
         })
-        // wx.createSelectorQuery().select('#msg-box').boundingClientRect(function (rect) {
-        //   // 使页面滚动到底部
-        //   wx.pageScrollTo({
-        //     scrollTop: rect.bottom
-        //   })
-        // }).exec()
+
       },
       fail(err) {
         console.log(err);

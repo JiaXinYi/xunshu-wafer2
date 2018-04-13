@@ -1,8 +1,8 @@
 <!--pages/msgDetail/msgDetail.wxml-->
 <!-- <text>pages/msgDetail/msgDetail.wxml</text> -->
 <!-- <scroll-view scroll-y style="height: 200px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}"> -->
-<view id="msg-box" class="message-box ">
-  <view wx:for="{{msgData}}" class="message-wrapper">
+<scroll-view class="message-scroll" scroll-y scroll-into-view="{{toView}}">
+  <view wx:for="{{msgData}}" class="message-wrapper" id="{{'msg-'+item.id}}">
     <!-- <text>{{item.message_text}}</text> -->
     <view wx:if="{{item.from_id==toId}}" class="message-item">
       <!-- <img [src]="toUs.pic" alt="客服" class="message-pic left"> -->
@@ -33,9 +33,11 @@
     </view>
     <view class="cf"></view>
   </view>
-</view>
+</scroll-view>
 
-<view class="send-box">
-  <input type='text' placeholder='输入消息' class="send-input" bindinput="bindKeyInput" value="{{message}}"></input>
-  <button bindtap="sendmsg" class="send-btn" type="primary">发送</button>
-</view>
+ <form bindreset="sendmsg">
+  <view class="send-box">
+    <input type='text' placeholder='输入消息' class="send-input" bindinput="bindKeyInput" value="{{message}}"></input>
+    <button class="send-btn" type="primary" form-type="reset">发送</button>
+  </view>
+</form> 
