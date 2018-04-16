@@ -95,6 +95,23 @@ Page({
               logged: true,
               openId: result.data.data.openId
             })
+            console.log(result.data.data.openId, result.data.data.nickName);
+            let value = {
+              openId: result.data.data.openId,
+              nickName: result.data.data.nickName
+            }
+            qcloud.request({
+              url:`${config.service.host}/weapp/adduser`,
+              login:false,
+              data:value,
+              success(result){
+                console.log(result.data.data);
+              },
+              fail(err){
+                console.log(err);
+              }
+
+            })
             // console.log(result);
           },
           fail(error) {

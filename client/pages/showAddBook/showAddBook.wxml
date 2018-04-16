@@ -11,7 +11,7 @@
     </block>
   </swiper>
 </view> -->
-<view>
+<view >
 <view class="addbtn" bindtap="showAddBook">+</view>
   <view wx:for="{{booklist}}" class="booklist">
     <view>

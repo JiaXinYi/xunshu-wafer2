@@ -60,3 +60,13 @@ CREATE TABLE `cMessagelist` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='信息列表';
 
 SET FOREIGN_KEY_CHECKS = 1;
+
+DROP TABLE IF EXISTS `cUserlist`;
+CREATE TABLE `cUserlist` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `open_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nickname` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='用户列表';
+
+SET FOREIGN_KEY_CHECKS = 1;

@@ -11,7 +11,8 @@ Page({
   data: {
     openId: '',
     msgData: [],
-    personData: []
+    personData: [],
+    usermap:{}
   },
 
   /**
@@ -25,6 +26,21 @@ Page({
     })
     wx.setNavigationBarTitle({
       title: '消息列表',
+    })
+    qcloud.request({
+      url: `${config.service.host}/weapp/userlist`,
+      login: false,
+      data: value,
+      success(result) {
+        let data = result.data.data;
+        that.setData({
+          usermap: data
+        })
+      },
+      fail(err) {
+        console.log(err);
+
+      }
     })
     var value = {
       fromId: fromId

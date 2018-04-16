@@ -54,4 +54,7 @@ router.get('/sendmsg', controllers.sendmsg)
 router.get('/mysendlist', controllers.mysendlist)
 //读取发送人和接收人为我的相关人员
 router.get('/myrecivelist', controllers.myrecivelist)
+router.get('/adduser', controllers.adduser)
+//读取发送人和接收人为我的相关人员
+router.get('/userlist', controllers.userlist)
 module.exports = router

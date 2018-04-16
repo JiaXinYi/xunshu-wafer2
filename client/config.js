@@ -4,6 +4,7 @@
 
 // 此处主机域名修改成腾讯云解决方案分配的域名
 var host = 'https://148865128.followbook.club';
+// var host = 'https://xzaaomt9.qcloud.la';
 
 var config = {
 

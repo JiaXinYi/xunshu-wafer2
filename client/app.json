@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/home/home",
     "pages/index/index",
     "pages/addCgi/addCgi",
     "pages/logs/logs",
@@ -9,7 +10,6 @@
     "pages/account/account",
     "pages/bookstores/bookstores",
     "pages/search/search",
-    "pages/home/home",
     "pages/addBook/addBook",
     "pages/showAddBook/showAddBook",
     "pages/changeBook/changeBook",
@@ -29,28 +29,16 @@
     "backgroundColor": "#fff",
     "list": [
       {
-        "pagePath": "pages/account/account",
-        "text": "我的",
-        "iconPath": "imgs/account-1.png",
-        "selectedIconPath": "imgs/account.png"
-      },
-      {
         "pagePath": "pages/home/home",
         "text": "首页",
         "iconPath": "imgs/index-1.png",
         "selectedIconPath": "imgs/index.png"
       },
       {
-        "pagePath": "pages/map/map",
-        "text": "地图",
-        "iconPath": "imgs/earth-1.png",
-        "selectedIconPath": "imgs/earth.png"
-      },
-      {
-        "pagePath": "pages/index/index",
-        "text": "登录",
-        "iconPath": "imgs/index-1.png",
-        "selectedIconPath": "imgs/index.png"
+        "pagePath": "pages/account/account",
+        "text": "换书",
+        "iconPath": "imgs/account-1.png",
+        "selectedIconPath": "imgs/account.png"
       }
     ]
   }

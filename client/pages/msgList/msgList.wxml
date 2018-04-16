@@ -4,7 +4,7 @@
     <view bindtap='sendmsg' class="msglist" data-id="{{item}}">
       <view class="list-text">
         <image src='../../imgs/rfq.png'></image>
-        给对方发消息
+        给{{usermap[item]?usermap[item]:'对方'}}发消息
         </view>
       <view class="list-img"></view>
     </view>
